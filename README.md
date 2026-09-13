@@ -5,14 +5,6 @@ Recursive CTE showcase over an HR dataset with a self-referencing
 depth, salary rollups, and subordinate/manager lookups using
 `WITH RECURSIVE`.
 
-## Status
-
-- [x] Day 1 — Data setup & schema design
-- [ ] Day 2 — Core recursive CTE: org tree traversal
-- [ ] Day 3 — Aggregations: salary & budget rollups
-- [ ] Day 4 — Advanced queries & edge cases
-- [ ] Day 5 — Packaging, visualization & documentation
-
 ## Folder Structure
 
 ```
@@ -52,12 +44,3 @@ python3 scripts/generate_seed.py
 - 1 CEO (root, `manager_id IS NULL`) → VPs → Directors → Managers → ICs
 - 127 employees across Engineering, Sales, Marketing, Operations
 
-## Validation (Day 1, passing)
-
-| Check | Result |
-|---|---|
-| Row counts | 4 departments, 127 employees |
-| Single root (CEO) | 1 |
-| Orphan `manager_id` refs | 0 |
-| Self-reference cycles | 0 |
-| Reachability (no cycles, recursion terminates) | 127 / 127 |
