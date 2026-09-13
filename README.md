@@ -5,13 +5,7 @@ Recursive CTE showcase over an HR dataset with a self-referencing
 depth, salary rollups, and subordinate/manager lookups using
 `WITH RECURSIVE`.
 
-## Status
 
-- [x] Day 1 — Data setup & schema design
-- [ ] Day 2 — Core recursive CTE: org tree traversal
-- [ ] Day 3 — Aggregations: salary & budget rollups
-- [ ] Day 4 — Advanced queries & edge cases
-- [ ] Day 5 — Packaging, visualization & documentation
 
 ## Folder Structure
 
@@ -29,14 +23,8 @@ reports/                Exported results (CSV, diagrams) — populated in Day 5
 docs/                   ERD / supporting diagrams
 ```
 
-## Setup
 
-Everything is already loaded into `data/org.db`. To rebuild from scratch:
 
-```bash
-sqlite3 data/org.db < sql/00_setup/01_schema.sql
-sqlite3 data/org.db < sql/00_setup/02_seed.sql
-sqlite3 data/org.db < sql/01_validation/03_validation.sql
 ```
 
 Or regenerate the seed data itself (127 employees, 4 departments, 5 levels):
