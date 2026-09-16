@@ -66,6 +66,20 @@ python3 scripts/generate_seed.py
 - `04_department_budget_variance.sql` — actual salary spend vs. allocated
   budget per department, with variance and an over/under-budget flag.
 
+**Advanced (`sql/04_advanced/`)**
+- `01_multiple_roots_handling.sql` — surfaces multiple root nodes (co-CEOs,
+  disconnected records) and true data-quality orphans (a `manager_id` that
+  points nowhere), so hierarchy corruption doesn't fail silently.
+- `02_org_chart_at_depth.sql` — parameterized (`:target_depth`): returns just
+  the employees at one hierarchy level.
+- `03_salary_inversions.sql` — Part A finds the highest-paid person in each
+  manager's entire subtree; Part B flags direct-report inversions (a report
+  out-earning their own manager).
+- `04_headcount_growth_over_time.sql` — cumulative headcount by hire year,
+  org-wide and per department, using window functions over `hire_date`.
+- `05_performance_notes.sql` — `EXPLAIN QUERY PLAN` output for the recursive
+  traversal and department rollup, plus indexing rationale.
+
 ## Validation
 
 | Check | Result |
@@ -84,3 +98,15 @@ python3 scripts/generate_seed.py
   by $767,180.
 - Headcount is heavily bottom-weighted: 94 of 127 employees (74%) sit at the
   deepest IC level (depth 5).
+
+## Key Findings (Day 4 Advanced)
+
+- **No salary inversions** exist between direct reports and their managers —
+  a genuine data characteristic (level-based salary bands don't overlap),
+  not a query bug.
+- Org headcount grew steadily since 2015, reaching all 127 employees by 2025;
+  the biggest single-year jump was 2018 (+21 hires).
+- `EXPLAIN QUERY PLAN` confirms both indexes (`idx_employees_manager_id`,
+  `idx_employees_department_id`) are already used by the query planner at
+  this dataset's size — the recursive join and department rollup both hit
+  index searches rather than full table scans.
