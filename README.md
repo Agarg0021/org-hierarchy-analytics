@@ -55,6 +55,17 @@ python3 scripts/generate_seed.py
 - `03_management_chain_up.sql` — parameterized (`:employee_id`): walks upward
   from any employee to the CEO.
 
+**Rollups (`sql/03_rollups/`)**
+- `01_headcount_per_manager.sql` — direct + indirect report count for every
+  manager, via an ancestor-walk recursive CTE.
+- `02_salary_by_depth_level.sql` — employee count, total/avg/min/max salary
+  aggregated by hierarchy depth (CEO → VP → Director → Manager → IC).
+- `03_subtree_salary_rollup.sql` — fully-loaded compensation cost of each
+  manager's entire downstream org (their own salary + every report, direct
+  and indirect).
+- `04_department_budget_variance.sql` — actual salary spend vs. allocated
+  budget per department, with variance and an over/under-budget flag.
+
 ## Validation
 
 | Check | Result |
@@ -64,3 +75,12 @@ python3 scripts/generate_seed.py
 | Orphan `manager_id` refs | 0 |
 | Self-reference cycles | 0 |
 | Reachability (no cycles, recursion terminates) | 127 / 127 |
+
+## Key Findings (Day 3 Rollups)
+
+- Total org-wide salary spend: **$14,260,621** (matches CEO's full subtree cost).
+- 3 of 4 departments are currently **over budget**: Operations (+124% of
+  budget), Marketing (+170%), and Sales (+17%). Engineering is under budget
+  by $767,180.
+- Headcount is heavily bottom-weighted: 94 of 127 employees (74%) sit at the
+  deepest IC level (depth 5).
