@@ -1,0 +1,128 @@
+employee_id,name,manager_id,job_title,department_id,salary,depth,reporting_chain
+1,Ivan Garcia,,Chief Executive Officer,4,410000,1,Ivan Garcia
+3,Liam Garcia,1,VP of Sales,2,275741,2,Ivan Garcia > Liam Garcia
+4,Lucas Tanaka,1,VP of Marketing,3,242082,2,Ivan Garcia > Lucas Tanaka
+2,Mei Kim,1,VP of Engineering,1,256049,2,Ivan Garcia > Mei Kim
+5,Wei Silva,1,VP of Operations,4,255247,2,Ivan Garcia > Wei Silva
+8,Ethan Park,3,Director,2,179115,3,Ivan Garcia > Liam Garcia > Ethan Park
+9,Jack Khan,3,Director,2,192876,3,Ivan Garcia > Liam Garcia > Jack Khan
+11,Jack Brown,4,Director,3,173349,3,Ivan Garcia > Lucas Tanaka > Jack Brown
+10,Yuki Kim,4,Director,3,175094,3,Ivan Garcia > Lucas Tanaka > Yuki Kim
+7,Ahmed Dubois,2,Director,1,183746,3,Ivan Garcia > Mei Kim > Ahmed Dubois
+6,Zara Smith,2,Director,1,188390,3,Ivan Garcia > Mei Kim > Zara Smith
+12,Raj Garcia,5,Director,4,181763,3,Ivan Garcia > Wei Silva > Raj Garcia
+13,Zara Kim,5,Director,4,196447,3,Ivan Garcia > Wei Silva > Zara Kim
+21,Ahmed Patel,8,Manager,2,139960,4,Ivan Garcia > Liam Garcia > Ethan Park > Ahmed Patel
+19,Ethan Okafor,8,Manager,2,125329,4,Ivan Garcia > Liam Garcia > Ethan Park > Ethan Okafor
+20,Olivia Silva,8,Manager,2,141960,4,Ivan Garcia > Liam Garcia > Ethan Park > Olivia Silva
+22,Grace Muller,9,Manager,2,125354,4,Ivan Garcia > Liam Garcia > Jack Khan > Grace Muller
+23,Raj Kim,9,Manager,2,140971,4,Ivan Garcia > Liam Garcia > Jack Khan > Raj Kim
+27,Carlos Ivanov,11,Manager,3,132964,4,Ivan Garcia > Lucas Tanaka > Jack Brown > Carlos Ivanov
+28,Layla Lopez,11,Manager,3,124681,4,Ivan Garcia > Lucas Tanaka > Jack Brown > Layla Lopez
+26,Layla Park,11,Manager,3,143524,4,Ivan Garcia > Lucas Tanaka > Jack Brown > Layla Park
+24,Chloe Brown,10,Manager,3,121832,4,Ivan Garcia > Lucas Tanaka > Yuki Kim > Chloe Brown
+25,Hiro Chen,10,Manager,3,130336,4,Ivan Garcia > Lucas Tanaka > Yuki Kim > Hiro Chen
+18,Elena Muller,7,Manager,1,123309,4,Ivan Garcia > Mei Kim > Ahmed Dubois > Elena Muller
+17,Maria Muller,7,Manager,1,129482,4,Ivan Garcia > Mei Kim > Ahmed Dubois > Maria Muller
+14,Grace Garcia,6,Manager,1,132403,4,Ivan Garcia > Mei Kim > Zara Smith > Grace Garcia
+15,Grace Nguyen,6,Manager,1,140599,4,Ivan Garcia > Mei Kim > Zara Smith > Grace Nguyen
+16,Sam Okafor,6,Manager,1,138918,4,Ivan Garcia > Mei Kim > Zara Smith > Sam Okafor
+29,Emma Dubois,12,Manager,4,137661,4,Ivan Garcia > Wei Silva > Raj Garcia > Emma Dubois
+30,Mei Park,12,Manager,4,134038,4,Ivan Garcia > Wei Silva > Raj Garcia > Mei Park
+33,Elena Garcia,13,Manager,4,125008,4,Ivan Garcia > Wei Silva > Zara Kim > Elena Garcia
+32,Nina Patel,13,Manager,4,144765,4,Ivan Garcia > Wei Silva > Zara Kim > Nina Patel
+31,Olivia Muller,13,Manager,4,124532,4,Ivan Garcia > Wei Silva > Zara Kim > Olivia Muller
+71,Lucas Park,21,Sales Engineer,2,104261,5,Ivan Garcia > Liam Garcia > Ethan Park > Ahmed Patel > Lucas Park
+70,Maria Ali,21,Sales Engineer,2,75372,5,Ivan Garcia > Liam Garcia > Ethan Park > Ahmed Patel > Maria Ali
+69,Sam Park,21,Sales Engineer,2,86135,5,Ivan Garcia > Liam Garcia > Ethan Park > Ahmed Patel > Sam Park
+62,Elena Rossi,19,Account Executive,2,73842,5,Ivan Garcia > Liam Garcia > Ethan Park > Ethan Okafor > Elena Rossi
+60,Ivan Dubois,19,Account Executive,2,70967,5,Ivan Garcia > Liam Garcia > Ethan Park > Ethan Okafor > Ivan Dubois
+61,Priya Tanaka,19,Account Executive,2,101826,5,Ivan Garcia > Liam Garcia > Ethan Park > Ethan Okafor > Priya Tanaka
+63,Fatima Tanaka,20,Account Executive,2,106422,5,Ivan Garcia > Liam Garcia > Ethan Park > Olivia Silva > Fatima Tanaka
+65,Maria Park,20,Account Executive,2,105533,5,Ivan Garcia > Liam Garcia > Ethan Park > Olivia Silva > Maria Park
+64,Nina Johnson,20,Sales Engineer,2,82445,5,Ivan Garcia > Liam Garcia > Ethan Park > Olivia Silva > Nina Johnson
+67,Omar Cohen,20,Sales Development Rep,2,80317,5,Ivan Garcia > Liam Garcia > Ethan Park > Olivia Silva > Omar Cohen
+68,Wei Khan,20,Sales Engineer,2,74490,5,Ivan Garcia > Liam Garcia > Ethan Park > Olivia Silva > Wei Khan
+66,Yuki Chen,20,Sales Engineer,2,73286,5,Ivan Garcia > Liam Garcia > Ethan Park > Olivia Silva > Yuki Chen
+72,Emma Kim,22,Account Executive,2,95938,5,Ivan Garcia > Liam Garcia > Jack Khan > Grace Muller > Emma Kim
+73,Ivan Nguyen,22,Sales Engineer,2,99964,5,Ivan Garcia > Liam Garcia > Jack Khan > Grace Muller > Ivan Nguyen
+74,James Lopez,22,Account Executive,2,110708,5,Ivan Garcia > Liam Garcia > Jack Khan > Grace Muller > James Lopez
+76,Liam Okafor,22,Sales Development Rep,2,74508,5,Ivan Garcia > Liam Garcia > Jack Khan > Grace Muller > Liam Okafor
+75,Wei Dubois,22,Account Executive,2,83969,5,Ivan Garcia > Liam Garcia > Jack Khan > Grace Muller > Wei Dubois
+81,Fatima Ali,23,Sales Development Rep,2,83803,5,Ivan Garcia > Liam Garcia > Jack Khan > Raj Kim > Fatima Ali
+79,Fatima Garcia,23,Sales Engineer,2,78800,5,Ivan Garcia > Liam Garcia > Jack Khan > Raj Kim > Fatima Garcia
+77,Priya Lopez,23,Sales Development Rep,2,105600,5,Ivan Garcia > Liam Garcia > Jack Khan > Raj Kim > Priya Lopez
+80,Sam Garcia,23,Account Executive,2,106256,5,Ivan Garcia > Liam Garcia > Jack Khan > Raj Kim > Sam Garcia
+78,Zara Cohen,23,Sales Development Rep,2,70512,5,Ivan Garcia > Liam Garcia > Jack Khan > Raj Kim > Zara Cohen
+98,James Garcia,27,SEO Analyst,3,87118,5,Ivan Garcia > Lucas Tanaka > Jack Brown > Carlos Ivanov > James Garcia
+97,Olivia Cohen,27,SEO Analyst,3,96193,5,Ivan Garcia > Lucas Tanaka > Jack Brown > Carlos Ivanov > Olivia Cohen
+96,Raj Brown,27,Content Strategist,3,88258,5,Ivan Garcia > Lucas Tanaka > Jack Brown > Carlos Ivanov > Raj Brown
+99,Aisha Ali,28,Marketing Specialist,3,98479,5,Ivan Garcia > Lucas Tanaka > Jack Brown > Layla Lopez > Aisha Ali
+101,Carlos Kim,28,Brand Manager,3,72908,5,Ivan Garcia > Lucas Tanaka > Jack Brown > Layla Lopez > Carlos Kim
+102,James Cohen,28,Brand Manager,3,105287,5,Ivan Garcia > Lucas Tanaka > Jack Brown > Layla Lopez > James Cohen
+103,Olivia Tanaka,28,Content Strategist,3,74585,5,Ivan Garcia > Lucas Tanaka > Jack Brown > Layla Lopez > Olivia Tanaka
+100,Sofia Ali,28,SEO Analyst,3,103516,5,Ivan Garcia > Lucas Tanaka > Jack Brown > Layla Lopez > Sofia Ali
+94,Elena Ivanov,26,Marketing Specialist,3,84577,5,Ivan Garcia > Lucas Tanaka > Jack Brown > Layla Park > Elena Ivanov
+92,James Khan,26,Brand Manager,3,91770,5,Ivan Garcia > Lucas Tanaka > Jack Brown > Layla Park > James Khan
+93,Noah Khan,26,Content Strategist,3,77084,5,Ivan Garcia > Lucas Tanaka > Jack Brown > Layla Park > Noah Khan
+95,Olivia Nguyen,26,Brand Manager,3,84915,5,Ivan Garcia > Lucas Tanaka > Jack Brown > Layla Park > Olivia Nguyen
+83,Ivan Tanaka,24,Marketing Specialist,3,88132,5,Ivan Garcia > Lucas Tanaka > Yuki Kim > Chloe Brown > Ivan Tanaka
+85,Mei Lopez,24,Content Strategist,3,106154,5,Ivan Garcia > Lucas Tanaka > Yuki Kim > Chloe Brown > Mei Lopez
+82,Omar Ivanov,24,SEO Analyst,3,86457,5,Ivan Garcia > Lucas Tanaka > Yuki Kim > Chloe Brown > Omar Ivanov
+84,Yuki Johnson,24,Marketing Specialist,3,111753,5,Ivan Garcia > Lucas Tanaka > Yuki Kim > Chloe Brown > Yuki Johnson
+86,Aisha Patel,25,Marketing Specialist,3,79768,5,Ivan Garcia > Lucas Tanaka > Yuki Kim > Hiro Chen > Aisha Patel
+90,Chloe Garcia,25,Content Strategist,3,93178,5,Ivan Garcia > Lucas Tanaka > Yuki Kim > Hiro Chen > Chloe Garcia
+87,Hiro Okafor,25,Marketing Specialist,3,108175,5,Ivan Garcia > Lucas Tanaka > Yuki Kim > Hiro Chen > Hiro Okafor
+89,Sam Chen,25,SEO Analyst,3,93449,5,Ivan Garcia > Lucas Tanaka > Yuki Kim > Hiro Chen > Sam Chen
+88,Sofia Johnson,25,Content Strategist,3,72741,5,Ivan Garcia > Lucas Tanaka > Yuki Kim > Hiro Chen > Sofia Johnson
+91,Zara Johnson,25,Brand Manager,3,85514,5,Ivan Garcia > Lucas Tanaka > Yuki Kim > Hiro Chen > Zara Johnson
+54,Aisha Garcia,18,Senior Software Engineer,1,113187,5,Ivan Garcia > Mei Kim > Ahmed Dubois > Elena Muller > Aisha Garcia
+57,Carlos Silva,18,Senior Software Engineer,1,105146,5,Ivan Garcia > Mei Kim > Ahmed Dubois > Elena Muller > Carlos Silva
+59,Elena Patel,18,Senior Software Engineer,1,99041,5,Ivan Garcia > Mei Kim > Ahmed Dubois > Elena Muller > Elena Patel
+56,Maria Rossi,18,Software Engineer,1,92236,5,Ivan Garcia > Mei Kim > Ahmed Dubois > Elena Muller > Maria Rossi
+58,Sofia Khan,18,Senior Software Engineer,1,88254,5,Ivan Garcia > Mei Kim > Ahmed Dubois > Elena Muller > Sofia Khan
+55,Sofia Tanaka,18,QA Engineer,1,100606,5,Ivan Garcia > Mei Kim > Ahmed Dubois > Elena Muller > Sofia Tanaka
+51,Elena Brown,17,Software Engineer,1,74643,5,Ivan Garcia > Mei Kim > Ahmed Dubois > Maria Muller > Elena Brown
+53,Lucas Ivanov,17,Senior Software Engineer,1,85925,5,Ivan Garcia > Mei Kim > Ahmed Dubois > Maria Muller > Lucas Ivanov
+52,Noah Ivanov,17,Senior Software Engineer,1,84040,5,Ivan Garcia > Mei Kim > Ahmed Dubois > Maria Muller > Noah Ivanov
+50,Wei Chen,17,Software Engineer,1,85003,5,Ivan Garcia > Mei Kim > Ahmed Dubois > Maria Muller > Wei Chen
+37,Aisha Nguyen,14,QA Engineer,1,98492,5,Ivan Garcia > Mei Kim > Zara Smith > Grace Garcia > Aisha Nguyen
+36,Chloe Dubois,14,Software Engineer,1,87486,5,Ivan Garcia > Mei Kim > Zara Smith > Grace Garcia > Chloe Dubois
+35,Omar Kim,14,DevOps Engineer,1,106256,5,Ivan Garcia > Mei Kim > Zara Smith > Grace Garcia > Omar Kim
+34,Zara Patel,14,DevOps Engineer,1,95216,5,Ivan Garcia > Mei Kim > Zara Smith > Grace Garcia > Zara Patel
+43,Emma Park,15,Software Engineer,1,75161,5,Ivan Garcia > Mei Kim > Zara Smith > Grace Nguyen > Emma Park
+39,Hiro Cohen,15,QA Engineer,1,109909,5,Ivan Garcia > Mei Kim > Zara Smith > Grace Nguyen > Hiro Cohen
+42,Layla Okafor,15,Software Engineer,1,90153,5,Ivan Garcia > Mei Kim > Zara Smith > Grace Nguyen > Layla Okafor
+40,Olivia Khan,15,Senior Software Engineer,1,105348,5,Ivan Garcia > Mei Kim > Zara Smith > Grace Nguyen > Olivia Khan
+38,Omar Khan,15,Software Engineer,1,103271,5,Ivan Garcia > Mei Kim > Zara Smith > Grace Nguyen > Omar Khan
+41,Zara Brown,15,Software Engineer,1,102021,5,Ivan Garcia > Mei Kim > Zara Smith > Grace Nguyen > Zara Brown
+48,Aisha Muller,16,DevOps Engineer,1,84725,5,Ivan Garcia > Mei Kim > Zara Smith > Sam Okafor > Aisha Muller
+46,Carlos Dubois,16,DevOps Engineer,1,83182,5,Ivan Garcia > Mei Kim > Zara Smith > Sam Okafor > Carlos Dubois
+45,Grace Khan,16,DevOps Engineer,1,87370,5,Ivan Garcia > Mei Kim > Zara Smith > Sam Okafor > Grace Khan
+44,Jack Dubois,16,Software Engineer,1,78241,5,Ivan Garcia > Mei Kim > Zara Smith > Sam Okafor > Jack Dubois
+49,James Park,16,QA Engineer,1,106301,5,Ivan Garcia > Mei Kim > Zara Smith > Sam Okafor > James Park
+47,Raj Okafor,16,QA Engineer,1,98711,5,Ivan Garcia > Mei Kim > Zara Smith > Sam Okafor > Raj Okafor
+107,Chloe Rossi,29,Logistics Coordinator,4,114388,5,Ivan Garcia > Wei Silva > Raj Garcia > Emma Dubois > Chloe Rossi
+105,Chloe Tanaka,29,Logistics Coordinator,4,91376,5,Ivan Garcia > Wei Silva > Raj Garcia > Emma Dubois > Chloe Tanaka
+106,Fatima Dubois,29,Office Manager,4,78341,5,Ivan Garcia > Wei Silva > Raj Garcia > Emma Dubois > Fatima Dubois
+108,Lucas Nguyen,29,Office Manager,4,96612,5,Ivan Garcia > Wei Silva > Raj Garcia > Emma Dubois > Lucas Nguyen
+104,Yuki Garcia,29,Office Manager,4,89681,5,Ivan Garcia > Wei Silva > Raj Garcia > Emma Dubois > Yuki Garcia
+111,Chloe Silva,30,Logistics Coordinator,4,103500,5,Ivan Garcia > Wei Silva > Raj Garcia > Mei Park > Chloe Silva
+109,Fatima Silva,30,Logistics Coordinator,4,98173,5,Ivan Garcia > Wei Silva > Raj Garcia > Mei Park > Fatima Silva
+110,Ivan Brown,30,Office Manager,4,100473,5,Ivan Garcia > Wei Silva > Raj Garcia > Mei Park > Ivan Brown
+125,Ahmed Nguyen,33,Operations Analyst,4,85367,5,Ivan Garcia > Wei Silva > Zara Kim > Elena Garcia > Ahmed Nguyen
+127,Emma Rossi,33,Operations Analyst,4,80014,5,Ivan Garcia > Wei Silva > Zara Kim > Elena Garcia > Emma Rossi
+122,Ethan Khan,33,Office Manager,4,101108,5,Ivan Garcia > Wei Silva > Zara Kim > Elena Garcia > Ethan Khan
+123,Jack Muller,33,Logistics Coordinator,4,111789,5,Ivan Garcia > Wei Silva > Zara Kim > Elena Garcia > Jack Muller
+124,Nina Muller,33,Office Manager,4,87996,5,Ivan Garcia > Wei Silva > Zara Kim > Elena Garcia > Nina Muller
+126,Yuki Dubois,33,Logistics Coordinator,4,75280,5,Ivan Garcia > Wei Silva > Zara Kim > Elena Garcia > Yuki Dubois
+116,Carlos Rossi,32,Logistics Coordinator,4,102399,5,Ivan Garcia > Wei Silva > Zara Kim > Nina Patel > Carlos Rossi
+120,Chloe Cohen,32,Logistics Coordinator,4,106629,5,Ivan Garcia > Wei Silva > Zara Kim > Nina Patel > Chloe Cohen
+119,Emma Garcia,32,Office Manager,4,99914,5,Ivan Garcia > Wei Silva > Zara Kim > Nina Patel > Emma Garcia
+121,Jack Lopez,32,Logistics Coordinator,4,110150,5,Ivan Garcia > Wei Silva > Zara Kim > Nina Patel > Jack Lopez
+117,Liam Smith,32,Operations Analyst,4,76985,5,Ivan Garcia > Wei Silva > Zara Kim > Nina Patel > Liam Smith
+118,Priya Cohen,32,Operations Analyst,4,100444,5,Ivan Garcia > Wei Silva > Zara Kim > Nina Patel > Priya Cohen
+114,Amara Silva,31,Operations Analyst,4,79656,5,Ivan Garcia > Wei Silva > Zara Kim > Olivia Muller > Amara Silva
+115,Emma Ivanov,31,Operations Analyst,4,110060,5,Ivan Garcia > Wei Silva > Zara Kim > Olivia Muller > Emma Ivanov
+113,Wei Muller,31,Office Manager,4,114092,5,Ivan Garcia > Wei Silva > Zara Kim > Olivia Muller > Wei Muller
+112,Wei Nguyen,31,Office Manager,4,103780,5,Ivan Garcia > Wei Silva > Zara Kim > Olivia Muller > Wei Nguyen

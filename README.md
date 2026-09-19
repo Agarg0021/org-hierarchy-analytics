@@ -80,6 +80,33 @@ python3 scripts/generate_seed.py
 - `05_performance_notes.sql` — `EXPLAIN QUERY PLAN` output for the recursive
   traversal and department rollup, plus indexing rationale.
 
+**Views (`sql/05_views/`)**
+- `01_org_chart_view.sql` — `org_chart_view`: the full org chart (depth,
+  reporting chain) as a reusable view instead of re-pasting the recursive
+  CTE. Created live in `data/org.db`.
+- `02_department_budget_rollup_view.sql` — `department_budget_rollup_view`:
+  salary spend vs. budget per department, with status flag. Also created
+  live in `data/org.db`.
+
+Both views are already registered in `data/org.db` — query them directly:
+```sql
+SELECT * FROM org_chart_view WHERE depth = 3;
+SELECT * FROM department_budget_rollup_view WHERE status = 'OVER BUDGET';
+```
+
+## Reports (`reports/`)
+
+- `org_chart_export.csv` — full 127-row org chart export from `org_chart_view`.
+- `budget_rollup_summary.csv` — 4-row department budget rollup.
+- `salary_inversions.csv` — direct-report inversions (0 rows — none exist in this data).
+- `department_budget_variance.png` — bar chart, allocated budget vs. actual spend per department.
+- `headcount_by_depth.png` — bar chart, headcount at each hierarchy level (CEO → IC).
+
+## Docs (`docs/`)
+
+- `erd.md` — entity-relationship diagram (Mermaid) for `departments` and
+  `employees`, with notes on the self-referencing `manager_id` relationship.
+
 ## Validation
 
 | Check | Result |
@@ -110,3 +137,12 @@ python3 scripts/generate_seed.py
   `idx_employees_department_id`) are already used by the query planner at
   this dataset's size — the recursive join and department rollup both hit
   index searches rather than full table scans.
+
+## Project Complete
+
+All 5 phases are done: schema + seed data, tree traversal (top-down,
+subordinates, upward chain), salary/budget rollups, edge-case handling
+(multi-root, depth filters, inversions, growth over time, performance), and
+finally reusable views + exported reports + ERD documentation. Everything
+in this README is backed by queries that were actually executed against
+`data/org.db` — every number cited above is a real result, not a projection.

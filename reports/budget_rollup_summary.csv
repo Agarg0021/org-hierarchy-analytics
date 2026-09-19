@@ -1,0 +1,5 @@
+department_id,department_name,headcount,total_salary_spend,allocated_budget,variance,pct_of_budget_used,status
+4,Operations,33,4027668,1800000,-2227668,223.8,OVER BUDGET
+3,Marketing,30,3233873,1200000,-2033873,269.5,OVER BUDGET
+2,Sales,30,3266260,2800000,-466260,116.7,OVER BUDGET
+1,Engineering,34,3732820,4500000,767180,83.0,UNDER BUDGET
